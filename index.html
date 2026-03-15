@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Pro | Final Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="circles">
+        <div></div><div></div><div></div><div></div><div></div>
+    </div>
+
+    <audio id="bg-music" loop><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg"></audio>
+    <audio id="correct-sound"><source src="https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3" type="audio/mpeg"></audio>
+    <audio id="wrong-sound"><source src="https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3" type="audio/mpeg"></audio>
+
+    <div class="glass-container">
+        <div id="home-screen">
+            <h1 class="premium-title">Quiz Pro <span class="brain-emoji">🧠</span></h1>
+            <div class="info-badges">
+                <span>3 Levels</span>
+                <span>7/10 to Pass</span>
+            </div>
+            <button class="glow-btn" onclick="startQuiz()">START GAME</button>
+        </div>
+
+        <div id="quiz-screen" class="hidden">
+            <div class="header">
+                <span id="timer" class="badge">⏱ 15s</span>
+                <span id="progress" class="badge">L1 | 1/10</span>
+            </div>
+            <div class="question-box">
+                <h2 id="question-text">Loading...</h2>
+            </div>
+            <div id="options-container"></div>
+        </div>
+
+        <div id="level-pass-screen" class="hidden">
+            <div class="pass-overlay">
+                <div class="trophy-box">🏆</div>
+                <h1>LEVEL CLEARED!</h1>
+                <p id="pass-msg"></p>
+                <button class="glow-btn" onclick="startNextLevel()">NEXT LEVEL</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <h1 id="result-title">Game Finished!</h1>
+            <h2 id="final-score"></h2>
+            <div id="review-container" class="modern-review"></div>
+            <button class="glow-btn" onclick="location.reload()">REPLAY</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
