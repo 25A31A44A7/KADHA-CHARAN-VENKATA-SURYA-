@@ -16,5 +16,5 @@ TECHNOLOGIES USED:
 EDITOR:
 Developed using Spck Editor (Mobile).
 
-How To Run
+How To Run:
 Open index.html in any web browser to start. 
